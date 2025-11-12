@@ -1,0 +1,35 @@
+version: "3.1"
+nlu:
+- intent: log_expense
+  examples: |
+    - I spent [25](amount) on [Food](category)
+    - Add [200](amount) for [Tuition](category)
+    - Log [150](amount) for [Groceries](subcategory)
+    - Record [40](amount) on [Food](category) [today](date)
+    - [Yesterday](date) I spent [60](amount) on [Groceries](subcategory)
+- regex: amount
+  examples: |
+    - \d+(\.\d{1,2})?
+- lookup: category
+  examples: |
+    - Food
+    - Housing
+    - Tuition
+    - Transport
+    - Entertainment
+- lookup: subcategory
+  examples: |
+    - Groceries
+    - Dining Out
+    - Fuel
+    - Utilities
+    - Internet
+- intent: affirm
+  examples: |
+    - yes
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - not really
+
