@@ -1,0 +1,11 @@
+defaults:
+  reduction_step: 10.0
+
+categories:
+  Food:
+    target_percent: 35.0
+  Groceries:
+    target_percent: 15.0
+  Tuition:
+    fixed: true
+

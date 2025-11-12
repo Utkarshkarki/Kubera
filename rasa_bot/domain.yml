@@ -1,0 +1,43 @@
+version: "3.1"
+intents:
+  - log_expense
+  - affirm
+  - deny
+entities:
+  - amount
+  - category
+  - subcategory
+  - date
+slots:
+  amount:
+    type: text
+    influence_conversation: true
+  category:
+    type: text
+    influence_conversation: true
+  subcategory:
+    type: text
+    influence_conversation: true
+  date:
+    type: text
+    influence_conversation: true
+responses:
+  utter_ask_amount:
+    - text: "How much did you spend?"
+  utter_ask_category:
+    - text: "Which category is this for?"
+  utter_ask_subcategory:
+    - text: "Any subcategory?"
+  utter_ask_date:
+    - text: "When was this expense?"
+  utter_confirm_log:
+    - text: "Logging {amount} for {subcategory or category} on {date}."
+actions:
+  - action_log_expense
+forms:
+  expense_form:
+    required_slots:
+      - amount
+      - category
+      - date
+
