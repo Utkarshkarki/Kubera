@@ -23,7 +23,7 @@ def test_known_targets_respected():
     plan = compute_advice_plan(items)
 
     assert isinstance(plan, AdvicePlan)
-    advice_pairs = {advice_to_tuple(a) for a in plan.advice} # line of code uses a set comprehension in Python.
+    advice_pairs = {advice_to_tuple(a) for a in plan.advice} # line of code uses a set comprehension in Python
     assert ("Food", "reduce_percent", 50.0, 35.0) in advice_pairs
     assert any(a.action == "explain_fixed" for a in plan.advice)
 

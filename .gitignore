@@ -29,3 +29,17 @@ build/
 .env
 .env.local
 
+# Model files (large binary files)
+*.spacy
+*.pkl
+*.h5
+*.pth
+
+# Uploaded files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
