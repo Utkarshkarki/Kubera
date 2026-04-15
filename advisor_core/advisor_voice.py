@@ -23,7 +23,7 @@ def plan_to_text_instructions(plan: AdvicePlan) -> str:
     return "\n".join(lines)
 
 
-def generate_message_with_llama3(plan: AdvicePlan) -> str:
+def generate_message_with_llama3(plan: AdvicePlan) -> str:   
     instructions = plan_to_text_instructions(plan)
     system_prompt = (
         "You are a friendly financial advisor chatbot. "
